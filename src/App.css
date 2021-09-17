@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+body{
+    background-color: floralwhite;
+}
+.outer-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin-left: auto;
+    margin-right: auto;
+    width: 23%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.balance {
+    margin-bottom: 30px
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.balance-amount {
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 2px #999;
+}
+.vl {
+    border-left: 2px solid lightgray;
+    height: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.income-expense {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.income {
+    color: greenyellow;
+}
+
+.expense {
+    color: crimson;
+}
+
+.history {
+    font-weight: bold;
+}
+
+.transaction {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    padding-bottom: -5px;
+    margin-bottom: 10px;
+    align-items: center;
+    border-right-width: initial;
+    border-right-style: solid;
+    border-right-color: greenyellow;
+    box-shadow: 0 2px #999;
+}
+
+.tran-name {
+    margin-left: 10px;
+}
+
+.tran-price {
+    margin-right: 10px;
+}
+
+.input-box {
+    width: 100%;
+    height: 25px;
+    margin-bottom: 12px
+}
+
+.input-box:focus {
+    outline-color: dodgerblue;
+}
+
+.label-names {
+    font-weight: 500;
+}
+
+.add-tran {
+    color: white;
+    background-color: #673ab7;
+    border: none;
+    width: 104%;
+    height: 31px;
+    cursor: pointer;
+    box-shadow: 0 2px #999;
+}
+
+.add-tran:hover {
+    background-color: white;
+    color: #673ab7;
 }
