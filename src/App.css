@@ -38,6 +38,9 @@ body{
     margin: auto;
 }
 
+.ul-remove{
+    padding-inline-start: 0px;
+}
 .income {
     color: greenyellow;
 }
@@ -67,6 +70,12 @@ body{
     margin-left: -8px;
     color: crimson;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease
+}
+
+.transaction:hover .delete-tran {
+    opacity: 1;
 }
 
 .transaction-border-income {
