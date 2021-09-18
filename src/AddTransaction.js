@@ -1,15 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const AddTransaction = (props) => (
-    <div>
-        <span className="history">Add new transaction</span>
-        <hr/>
-        <label className="label-names">Text</label>
-        <input aria-label="Text" className="input-box"/>
-        <label className="label-names">Amount</label>
-        <input aria-label="Text" className="input-box"/>
-        <button className="add-tran">Add Transaction</button>
-    </div>
-);
+function AddTransaction(props) {
+    const [newName, setnewName] = useState('');
+    const [newAMount, setnewAmount] = useState('');
+    const onSubmit = (e) => {
+        e.preventDefault();
+        props.addTransaction((prev) => [...prev, {name: newName, amount: newAMount}]);
+    }
+    return (
+        <div>
+            <span className="history">Add new transaction</span>
+            <hr/>
+            <form onSubmit={onSubmit}>
+                <label className="label-names">Text</label>
+                <input aria-label="Text" onChange={(e) => setnewName(e.target.value)} className="input-box"/>
+                <label className="label-names">Amount</label>
+                <input aria-label="Text" onChange={(e) => setnewAmount(e.target.value)} className="input-box"/>
+                <button className="add-tran" onClick={onSubmit}>Add Transaction</button>
+            </form>
+        </div>
+    );
+}
 
 export default AddTransaction;

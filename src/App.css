@@ -60,10 +60,22 @@ body{
     align-items: center;
     border-right-width: initial;
     border-right-style: solid;
-    border-right-color: greenyellow;
     box-shadow: 0 2px #999;
 }
 
+.delete-tran {
+    margin-left: -8px;
+    color: crimson;
+    cursor: pointer;
+}
+
+.transaction-border-income {
+    border-right-color: greenyellow;
+}
+
+.transaction-border-expense {
+    border-right-color: crimson;
+}
 .tran-name {
     margin-left: 10px;
 }
